@@ -1,10 +1,8 @@
 <script lang="ts">
   import svelteLogo from "./assets/svelte.svg";
-  import Counter from "./lib/Counter.svelte";
-  import TailwindCss from "./TailwindCSS.svelte";
+  import Counter from "@ui/Counter.svelte";
 </script>
 
-<TailwindCss />
 <main>
   <div class="flex justify-evenly">
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
@@ -31,19 +29,8 @@
   <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
 </main>
 
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
+<style global lang="postcss">
+  @tailwind utilities;
+  @tailwind components;
+  @tailwind base;
 </style>
